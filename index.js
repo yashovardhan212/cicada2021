@@ -464,3 +464,26 @@ app.post("/level5asdkknda",(req,res) => {
     }
     );
 })
+
+
+app.post("/alskdjh87657776", (req,res) => {
+    const flag1 = req.body.flag1;
+    const flag2 = req.body.flag2;
+
+    const flag3 = req.body.flag3;
+
+    const flag4 = req.body.flag4;
+    const uname = req.body.uname;
+    const passwd = req.body.passwd;
+    const email = req.body.email;
+
+    if(flag1 =="ce0ee327cbd66b659526f2b876748625" && flag2 == "jdhbkasbdahbdhasbjdlevel3"
+    && flag3 == "ksjdfusebfgtryuhdsfrohuhj" && flag4 == "54DFG65T5G45DG46D5G48ER4G8D48F4G6D5G654"){
+            var data = JSON.stringify({"email":email ,"Time":Date().toString()})
+            fs.writeFile('Final.json',data);
+            return res.send("[+]Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided earlier");
+    }else{
+            return res.send("[+]D0n't Try T0 B3c0m3 0v3r$m@rT");
+    }
+
+})
