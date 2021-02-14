@@ -15,7 +15,7 @@ const options = { defaultValue: {} }
 app.use(
 
     cors({ 
-        origin: "*", 
+        origin: "http://127.0.0.1:4200", 
         methods: 'GET,POST',
         allowedHeaders: [
             'Content-Type', 
