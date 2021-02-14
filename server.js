@@ -33,7 +33,7 @@ app.listen(process.env.PORT || 4300, () => {
 });
 
 app.get("/", (req, res) => {
-  console.log(req.body)
+  return res.send("hey welcome")
 });
 
 
