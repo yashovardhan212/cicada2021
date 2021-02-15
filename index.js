@@ -11,11 +11,15 @@ const updateJsonFile = require('update-json-file')
 let file = editJsonFile("MainAuth.JSON");
 const options = { defaultValue: {} }
 
+var nodemailer = require('nodemailer');
+const { emit } = require("process");
+
+
 
 app.use(
 
     cors({ 
-        origin: "http://127.0.0.1", 
+        origin: "https://students.iiserb.ac.in", 
         methods: 'GET,POST',
         allowedHeaders: [
             'Content-Type', 
@@ -496,4 +500,37 @@ app.post("/alskdjh87657776", (req,res) => {
             return res.send("[+]D0n't Try T0 B3c0m3 0v3r$m@rT");
     }
 
+})
+
+app.get("/email-otp", (req,res)=>{
+    return res.send("done")
+})
+app.post("/email-otp",(req,res)=>
+{
+    const email = req.body.email
+    //console.log(req)
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'ankitsin1337@gmail.com',
+          pass: 'ankit@123'
+        }
+      });
+      
+      var mailOptions = {
+        from: 'ankitsin1337@gmail.com',
+        to: email,
+        subject: 'CICADA CREDENTIALS',
+        text: 'DATA'
+      };
+
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
+      
+      
 })
