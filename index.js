@@ -487,24 +487,32 @@ app.post("/alskdjh87657776", (req,res) => {
     const email = req.body.email;
 
     if(flag1 =="ce0ee327cbd66b659526f2b876748625" && flag2 == "49 51 51 55 64 50 51 55 55 64 82 48 48 84 64 49 50 55 48 48 49 64 49 50 51" && flag3 == "ksjdfusebfgtryuhdsfrohuhj" && flag4 == "54DFG65T5G45DG46D5G48ER4G8D48F4G6D5G654"){
-            var data = ({"email":email ,"Time":Date().toString()}).toString()+":"
-            
-            var m = JSON.parse(fs.readFileSync("Final.json").toString());
-            var n = ""
-            for(let item1 in m){
-                
-                    n = m[item1].Winners  
-                    m[item1].Winners = n + ":"+data
-
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'ankitsin1337@gmail.com',
+              pass: 'ankit@123'
             }
-            
-            //fs.writeFile("Final.json", JSON.stringify(m));
-            
-        
-            fs.writeFileSync("Final.json", JSON.stringify(m));
+          });
+          
+          var mailOptions = {
+            from: 'ankitsin1337@gmail.com',
+            to: 'yashovardhan18@iiserb.ac.in',
+            subject: 'CICADA Winners',
+            text: email.toString()+Date().toString()
+          };
+    
+          transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
+          
            
-            return res.send(data.toString()+email.toString)
-            //return res.send("[+]Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided earlier");
+            //return res.send(data.toString()+email.toString)
+            return res.send("[+]Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided earlier");
     }else{
             return res.send("[+]D0n't Try T0 B3c0m3 0v3r$m@rT");
     }
@@ -518,28 +526,6 @@ app.post("/email-otp",(req,res)=>
 {
     const email = req.body.email
     //console.log(req)
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: 'ankitsin1337@gmail.com',
-          pass: 'ankit@123'
-        }
-      });
-      
-      var mailOptions = {
-        from: 'ankitsin1337@gmail.com',
-        to: email,
-        subject: 'CICADA CREDENTIALS',
-        text: 'DATA'
-      };
-
-      transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-      });
-      
+    
       
 })
