@@ -503,7 +503,7 @@ app.post("/alskdjh87657776", (req,res) => {
         
             fs.writeFileSync("Final.json", JSON.stringify(m));
            
-            return res.send(data)
+            return res.send(data.toString()+email.toString)
             //return res.send("[+]Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided earlier");
     }else{
             return res.send("[+]D0n't Try T0 B3c0m3 0v3r$m@rT");
