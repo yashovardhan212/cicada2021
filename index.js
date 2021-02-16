@@ -498,7 +498,11 @@ app.post("/alskdjh87657776", (req,res) => {
 
             }
             
-        fs.writeFile("Final.json", JSON.stringify(m));
+            //fs.writeFile("Final.json", JSON.stringify(m));
+            fs.writeFile('Final.json', JSON.stringify(m), function(err, result) {
+                //if(err) console.log('error', err);
+              });
+           
 
             return res.send("[+]Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided earlier");
     }else{
