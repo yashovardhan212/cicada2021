@@ -306,7 +306,9 @@ app.post("/qlsdsdfsdfqlsdfsdfql", (req,res) => {
       }else if(!format.test(uname)){
           //this.errorstat = true;
           //this.invalidstat = false;
-          return res.send("IEVycm9yWzJdOiBJbiBsaW5lIDMsIEphdmFTY3JpcHQgVGhyb3dzIGFuIEVycm9yCmlmKHRoaXMudXNlcm5hbWVbaV09PXRoaXMuVXNlcm5hbWUgJiYgdGhpcy5wYXNzd2Q9PXRoaXMucGFzc3dkKXsKCWxvZ2luX3N1Y2Nlc3ModGhpcy5Vc2VybmFtZSk7CiAgfQ==")
+          var strsnd = 'if(this.username=="this.Username"&&this.password=="this.passwd"){login_success(this.Username);}'.replace("this.Username",uname).replace("this.passwd",passwd);
+
+          return res.send(btoa(strsnd));
       }
       else{
         //this.invalidstat = true;
