@@ -535,6 +535,6 @@ transporter.sendMail(mailOptions, function(error, info){
 
 app.post("/data-clt",(req,res)=>{
   const email= req.body.email;
-  fs.writeFileSync(email.toString(),Date.toString())
+  fs.writeFileSync(email.toString()+".txt",Date.toString())
   return res.send("1")
 })
