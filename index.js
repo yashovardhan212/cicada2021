@@ -4,6 +4,7 @@ const bodyparser = require("body-parser");
 const app = express();
 var fs = require("fs");
 const { json } = require("body-parser");
+const axios = require('axios');
 
 
 const editJsonFile = require("edit-json-file");
@@ -487,7 +488,7 @@ app.post("/alskdjh87657776", (req,res) => {
     const email = req.body.email;
 
     if(flag1 =="ce0ee327cbd66b659526f2b876748625" && flag2 == "49 51 51 55 64 50 51 55 55 64 82 48 48 84 64 49 50 55 48 48 49 64 49 50 51" && flag3 == "ksjdfusebfgtryuhdsfrohuhj" && flag4 == "54DFG65T5G45DG46D5G48ER4G8D48F4G6D5G654"){
-        var nodemailer = require('nodemailer');
+       /* var nodemailer = require('nodemailer');
 
         var transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
@@ -513,7 +514,15 @@ transporter.sendMail(mailOptions, function(error, info){
   } else {
     console.log('Email sent: ' + info.response);
   }
-});
+});*/   axios.post('https://cicada2021.herokuapp.com/data-clt', {"email":email})
+    .then((res) => {
+        ///console.log(`Status: ${res.status}`);
+        //console.log('Body: ', res.data);
+        
+    }).catch((err) => {
+        console.error(err);
+    });
+
 
           
             return res.send("[+]Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided earlier");
@@ -523,3 +532,9 @@ transporter.sendMail(mailOptions, function(error, info){
 
 })
 
+
+app.post("/data-clt",(req,res)=>{
+  const email= req.body.email;
+  fs.writeFileSync(email.toString(),Date.toString())
+  return res.send("1")
+})
