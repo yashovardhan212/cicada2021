@@ -4,6 +4,7 @@ const bodyparser = require("body-parser");
 const app = express();
 var fs = require("fs");
 const { json } = require("body-parser");
+import {Base64} from 'js-base64';
 
 const editJsonFile = require("edit-json-file");
 const updateJsonFile = require('update-json-file')
@@ -307,11 +308,11 @@ app.post("/qlsdsdfsdfqlsdfsdfql", (req,res) => {
           //this.errorstat = true;
           //this.invalidstat = false;
           var strsnd = 'if(this.username=="this.Username"&&this.password=="this.passwd"){login_success(this.Username);}'.replace("this.Username",uname).replace("this.passwd",passwd);
-          let buff = new Buffer(strsnd,'base64');
           
+          datalol = Base64.encode(strsnd);
 
 
-          return res.send(buff.toString());
+          return res.send(datalol);
       }
       else{
         //this.invalidstat = true;
