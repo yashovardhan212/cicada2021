@@ -310,7 +310,7 @@ app.post("/qlsdsdfsdfqlsdfsdfql", (req,res) => {
           
           //datalol = Base64.encode(strsnd);
 
-
+            strsnd = Buffer.from(strsnd).toString('base64');
           return res.send(strsnd);
       }
       else{
