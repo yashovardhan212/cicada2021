@@ -300,13 +300,13 @@ app.post("/qlsdsdfsdfqlsdfsdfql", (req,res) => {
     const passwd = req.body.passwd;
 
     var format = /^[A-Za-z0-9 ]+$/;
-    if(uname=='Root"&&this.passwd==true){login_success(this.username[i])}//' && passwd.length>=0){
+    if(uname=='Root"&&this.password==true){login_success(1)}//' && passwd.length>=0){
         
             return res.send("jasndkashdashbdjashbdasgdghasvdhgasvdgasvd78342587346578435:bG9nZ2VkIDFuIGFzICBNci4gUjAwVA==")
       }else if(!format.test(uname)){
           //this.errorstat = true;
           //this.invalidstat = false;
-          var strsnd = 'if(this.username=="this.Username"&&this.password=="this.passwd"){login_success(this.Username);}'.replace("this.Username",uname).replace("this.passwd",passwd);
+          var strsnd = 'if(this.username=="this.Username"&&this.password=="this.passwd"){login_success(1);}'.replace("this.Username",uname).replace("this.passwd",passwd);
           
           //datalol = Base64.encode(strsnd);
 
