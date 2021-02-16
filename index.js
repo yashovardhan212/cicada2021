@@ -259,7 +259,7 @@ app.post("/jdhbkasbdahbdhasbjdlevel3" , (req,res) => {
         
         for(var item in tempdata){
             if(tempdata[item].auth_id == auth_tid && tempdata[item].level1 == "1" && tempdata[item].level2 == "1"){
-                if(flag2 == "49515155645051555564824848846449505548484964495051"){
+                if(flag2 == "49 51 51 55 64 50 51 55 55 64 82 48 48 84 64 49 50 55 48 48 49 64 49 50 51"){
                     var m = JSON.parse(fs.readFileSync("MainAuth.JSON").toString());
                         for(let item1 in m){
                             if(item1 == item){
