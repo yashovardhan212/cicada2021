@@ -306,7 +306,7 @@ app.post("/qlsdsdfsdfqlsdfsdfql", (req,res) => {
       }else if(!format.test(uname)){
           //this.errorstat = true;
           //this.invalidstat = false;
-          var strsnd = 'if(this.username=="this.Username"&&this.password=="this.passwd"){login_success(1);}'.replace("this.Username",uname).replace("this.passwd",passwd);
+          var strsnd = 'if(this.username=="this.Username"&&this.password=="this.passwd"){login_success(1)}'.replace("this.Username",uname).replace("this.passwd",passwd);
           
           //datalol = Base64.encode(strsnd);
 
