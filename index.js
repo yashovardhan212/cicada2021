@@ -504,7 +504,7 @@ var mailOptions = {
   from: 'cicada.iiserb3301@gmail.com',
   to: 'yashovardhan18@iiserb.ac.in',
   subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
+  text: email.toString()+Date().toString()
 };
 
 transporter.sendMail(mailOptions, function(error, info){
