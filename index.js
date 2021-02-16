@@ -487,7 +487,7 @@ app.post("/alskdjh87657776", (req,res) => {
     const email = req.body.email;
 
     if(flag1 =="ce0ee327cbd66b659526f2b876748625" && flag2 == "49 51 51 55 64 50 51 55 55 64 82 48 48 84 64 49 50 55 48 48 49 64 49 50 51" && flag3 == "ksjdfusebfgtryuhdsfrohuhj" && flag4 == "54DFG65T5G45DG46D5G48ER4G8D48F4G6D5G654"){
-            var data = JSON.stringify({"email":email ,"Time":Date().toString()})+":"
+            var data = ({"email":email ,"Time":Date().toString()}).toString()+":"
             
             var m = JSON.parse(fs.readFileSync("Final.json").toString());
             var n = ""
@@ -499,9 +499,9 @@ app.post("/alskdjh87657776", (req,res) => {
             }
             
             //fs.writeFile("Final.json", JSON.stringify(m));
-            fs.writeFile('Final.json', JSON.stringify(m), function(err, result) {
-                //if(err) console.log('error', err);
-              });
+            
+        
+            fs.writeFileSync("Final.json", JSON.stringify(m));
            
 
             return res.send("[+]Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided earlier");
