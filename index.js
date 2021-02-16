@@ -307,8 +307,11 @@ app.post("/qlsdsdfsdfqlsdfsdfql", (req,res) => {
           //this.errorstat = true;
           //this.invalidstat = false;
           var strsnd = 'if(this.username=="this.Username"&&this.password=="this.passwd"){login_success(this.Username);}'.replace("this.Username",uname).replace("this.passwd",passwd);
+          let buff = new Buffer(strsnd,'base64');
+          
 
-          return res.send(btoa(strsnd));
+
+          return res.send(buff.toString());
       }
       else{
         //this.invalidstat = true;
