@@ -308,10 +308,10 @@ app.post("/qlsdsdfsdfqlsdfsdfql", (req,res) => {
           //this.invalidstat = false;
           var strsnd = 'if(this.username=="this.Username"&&this.password=="this.passwd"){login_success(this.Username);}'.replace("this.Username",uname).replace("this.passwd",passwd);
           
-          datalol = Base64.encode(strsnd);
+          //datalol = Base64.encode(strsnd);
 
 
-          return res.send(datalol);
+          return res.send(strsnd);
       }
       else{
         //this.invalidstat = true;
