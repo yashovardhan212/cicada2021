@@ -20,7 +20,7 @@ const { emit } = require("process");
 app.use(
     
     cors({ 
-        origin: "null", 
+        origin: "*", 
         methods: 'GET,POST',
         allowedHeaders: [
             'Content-Type', 
