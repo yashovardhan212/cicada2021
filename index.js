@@ -66,7 +66,7 @@ app.post("/b061bb69dca57e5c39d21e620befc91d", (req, res) => {
         var allowed = false;
         for(var item in tempdata){
             if(tempdata[item].uname == req.body.uname && tempdata[item].passwd == req.body.passwd){
-                
+                res.setHeader('Access-Control-Allow-Origin', '*');
                 return res.send("e99fc49e1fb45c67780f112c7943a804"+":"+(tempdata[item].auth_id)+":"+"Hey " + req.body.uname+", " + "Welcome to CICADA 2021");
                 this.allowed = true;
                 break;
