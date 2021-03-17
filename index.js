@@ -29,7 +29,7 @@ app.use(
             'Access-Control-Allow-Origin'
            
         ], 
-        preflightContinue: false 
+        preflightContinue: true 
     }),
     bodyparser.json()
     
