@@ -20,7 +20,7 @@ const { emit } = require("process");
 app.use(
     
     cors({ 
-        origin: "https://students.iiserb.ac.in", 
+        origin: false, 
         methods: 'GET,POST',
         allowedHeaders: [
             'Content-Type', 
