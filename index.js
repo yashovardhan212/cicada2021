@@ -17,7 +17,7 @@ var nodemailer = require('nodemailer');
 const { emit } = require("process");
 
 
-app.use(
+/*app.use(
     
     cors({ 
         origin: "https://students.iiserb.ac.in/cicada'21/", 
@@ -33,7 +33,7 @@ app.use(
     }),
     bodyparser.json()
     
-);
+);*/
 
 
 app.all('*', function(req, res, next) {
