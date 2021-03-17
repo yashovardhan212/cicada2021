@@ -26,24 +26,14 @@ app.use(
             'Content-Type', 
             
             'Origin', 
-            'Access-Control-Allow-Origin'
+            
            
         ], 
-        preflightContinue: true 
+        preflightContinue: false 
     }),
     bodyparser.json()
     
 );
-
-app.use(function (req, res, next) {
-
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-    next();
-});
 
 app.listen(process.env.PORT || 4300, () => {
   //console.log("The server started on port 4300 !!!!!!");
@@ -66,7 +56,7 @@ app.post("/b061bb69dca57e5c39d21e620befc91d", (req, res) => {
         var allowed = false;
         for(var item in tempdata){
             if(tempdata[item].uname == req.body.uname && tempdata[item].passwd == req.body.passwd){
-                res.setHeader('Access-Control-Allow-Origin', '*');
+                
                 return res.send("e99fc49e1fb45c67780f112c7943a804"+":"+(tempdata[item].auth_id)+":"+"Hey " + req.body.uname+", " + "Welcome to CICADA 2021");
                 this.allowed = true;
                 break;
