@@ -22,12 +22,17 @@ const { emit } = require("process");
 app.use(
     
     cors({ 
+<<<<<<< HEAD
         origin: "*", 
+=======
+        origin: 'https://students.iiserb.ac.in', 
+>>>>>>> 8c8e24478142fdd977ef5847327fbd9020f162c8
         methods: 'GET,POST',
         allowedHeaders: [
             'Content-Type', 
             
             'Origin', 
+            
            
         ], 
         preflightContinue: false 
@@ -35,6 +40,7 @@ app.use(
     bodyparser.json()
     
 );
+
 app.listen(process.env.PORT || 4300, () => {
   //console.log("The server started on port 4300 !!!!!!");
 });
@@ -44,6 +50,55 @@ app.get("/", (req, res) => {
 });
 
 
+<<<<<<< HEAD
+=======
+app.get("/b061bb69dca57e5c39d21e620befc91d", (req, res) => {
+    return res.send("D0n't 1nsp3ct t00 muCh ,GO BACK AND PLAY CICADA ! Y0U W0N'T GET ANYTHING HERE!!!")
+  });
+//main auth post request handling
+app.post("/b061bb69dca57e5c39d21e620befc91d", (req, res) => {
+  
+  fs.readFile("MainAuth.JSON", "utf-8", (err, data) => {
+        const tempdata = JSON.parse(data);
+       
+        var allowed = false;
+        for(var item in tempdata){
+            if(tempdata[item].uname == req.body.uname && tempdata[item].passwd == req.body.passwd){
+                
+                return res.send("e99fc49e1fb45c67780f112c7943a804"+":"+(tempdata[item].auth_id)+":"+"Hey " + req.body.uname+", " + "Welcome to CICADA 2021");
+                this.allowed = true;
+                break;
+            }
+        }
+        if(this.allowed == false){
+            return res.send("d21e620befc91d5c39d249e1fb4a804s"+':'+"You AR3  n0T aLL0W3D ON TH1$ $3rV3r!!!");
+        }
+        this.allowed = false;}
+        
+  );});
+
+
+  //function to check if user is valid or not 
+function IsuserValid(auth_id_value){
+    fs.readFile("MainAuth.JSON", "utf-8", (err, data) => { 
+        const tempdata = JSON.parse(data);
+        var temp_allowed = false;
+        for(var item in tempdata){
+            if(tempdata[item].auth_id == auth_id_value){
+                return (true);
+                break;
+                temp_allowed = true;
+                console.log("true user")
+                
+        }
+    }
+        if(temp_allowed==false){return (false); console.log("wrong user")};
+    });
+    
+  }
+
+  //robots txt data handling by post request
+>>>>>>> 8c8e24478142fdd977ef5847327fbd9020f162c8
 
 
 app.post("/level1", (req, res) => {
