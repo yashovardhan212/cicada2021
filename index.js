@@ -153,5 +153,43 @@ app.post("/quotes",(req,res) => {
 
     if(ip == "172.26.6.131"){return res.send("Flag: 8787sdf8s7df78b8h8n8g8h7n8gn87")}else{return res.send("[+]F00l No flag ! Try again")}
 })
+
+
+app.post("/alskdjh87657776", (req,res) => {
+    const email = req.body.name;
+
+    
+        var nodemailer = require('nodemailer');
+
+        var transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+  port: 587,
+
+  service: 'gmail',
+  auth: {
+    user: 'cicada.iiserb3301@gmail.com',
+    pass: 'asdf;lkj567%^&'
+  }
+});
+
+var mailOptions = {
+  from: 'cicada.iiserb3301@gmail.com',
+  to: email',
+  subject: 'Sending Email using Node.js',
+  text: email.toString()+Date().toString()
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+}); 
+
+          
+           
+
+})
   
   
