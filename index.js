@@ -188,7 +188,7 @@ transporter.sendMail(mailOptions, function(error, info){
 }); 
 
           
-           
+         return  res.send("lol")
 
 })
   
