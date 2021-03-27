@@ -6,6 +6,8 @@ var fs = require("fs");
 const { json } = require("body-parser");
 const axios = require('axios');
 
+const fetch = require('node-fetch');
+
 
 const editJsonFile = require("edit-json-file");
 const updateJsonFile = require('update-json-file')
@@ -20,7 +22,7 @@ const { emit } = require("process");
 app.use(
     
     cors({ 
-        origin: "null", 
+        origin: "*", 
         methods: 'GET,POST',
         allowedHeaders: [
             'Content-Type', 
@@ -63,6 +65,87 @@ app.post("/level1", (req, res) => {
   });
 
 
+
+ app.post("/Randomlevel", (req, res) => {
+  
  
+        const location_name = req.body.lol;
+       if(location_name == "Oymyakon"){return res.send("7656asda7sd675as6d7gdas7dg7agsd76gd")}else{return res.send("[+]F00l No flag ! Try again")}
+        
+  });
 
 
+
+
+  app.post("/levelc", (req, res) => {
+  
+    const idnum = req.body.idnumber;
+    const role  = req.body.role;
+    function makeid(length) {
+        var result           = '';
+        var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for ( var i = 0; i < length; i++ ) {
+           result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+     }
+     
+     const passwd = makeid(20);
+     console.log(role)
+     if(role == "user"){
+         return  res.send("[+] Y0ur passw0rd 15 "+passwd)
+     }else if(role=="admin"){
+         return res.send("Y0ur FLAG is 67dsf6767sd76f765fgs5df5f3v32v3")
+     }else{
+         return res.send("0")
+     }
+
+});
+
+
+app.post("/secret", (req, res) => {
+  
+ 
+    const usernm = req.body.usernm;
+    const passwd = req.body.passwd;
+
+   if(usernm == "administrator" && passwd == "dfg67tdfg7df67gfg32yt34frytf391298923g674"){return res.send("Flag: 7656asda7s-s0df90fs0d9s09dfsd76gd")}else{return res.send("[+]F00l No flag ! Try again")}
+    
+});
+
+app.post("/code",(req,res) => {
+    const code  = req.body.code;
+
+    if(code == "3301962047958106"){return res.send("Flag: 6546sdf45sd21f56sd4f6s8df46s5df4")}else{return res.send("[+]F00l No flag ! Try again")}
+})
+
+
+app.post("/levelsj",(req,res) => {
+    const msg  = req.body.msg;
+    if(msg=="Hello" || msg=="hello" || msg=="hi"){
+        console.log(msg)
+        return res.send("Hii Root")
+    }else if(msg==""){
+        return res.send("What ?")
+    }else {
+        fetch('http://127.0.0.1:4300' +'/alskkdjasdkjajsdasdkjaslkdjalskjdlkasjdlkasjdlkjasdlkjjasdj/'+msg)
+    .then(res => res.text())
+    .then(text => console.log(text))
+    }
+
+} )
+
+app.get("/alskkdjasdkjajsdasdkjaslkdjalskjdlkasjdlkasjdlkjasdlkjjasdj/:code", (req, res) => {
+    const code = req.params.code;
+    //console.log(code)
+    return res.send('<input id="password" value="adminpassword1234@1234@pop@123"> <p id="secret"></p>  '+code)
+  });
+  
+
+app.get("/check/:lol",(req,res) => {
+    console.log(req.params.lol);
+
+} )
+  
+  
