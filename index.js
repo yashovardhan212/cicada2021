@@ -147,5 +147,11 @@ app.get("/check/:lol",(req,res) => {
     console.log(req.params.lol);
 
 } )
+
+app.post("/quotes",(req,res) => {
+    const ip  = req.body.addrs;
+
+    if(ip == "172.26.6.131"){return res.send("Flag: 8787sdf8s7df78b8h8n8g8h7n8gn87")}else{return res.send("[+]F00l No flag ! Try again")}
+})
   
   
