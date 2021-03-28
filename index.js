@@ -52,14 +52,16 @@ app.post("/level1", (req, res) => {
         const passwd = req.body.password;
        // console.log(req.body)
         if(passwd == "incorrect"){
-           return  res.send("[+] Try again")
+           return  res.send("Try again")
         }else if(passwd == ""){
             return res.send("Enter a Password!")
         }
         else if(passwd == "again"){
            return  res.send(" Flag: 5ds4f54sdf54sd5f4s5d4f5sd4f")
-        }else{
+        }else if(passwd == "password"){
             return res.send("Your password is incorrect.")
+        }else{
+            return res.send("D0n't w0rry! w3 ar3 watching y0u l0l")
         }
         
   });
