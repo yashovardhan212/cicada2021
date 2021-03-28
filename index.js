@@ -161,7 +161,34 @@ app.post("/db" , (req,res) => {
     const code = req.body.code;
     
     if(code == "1270011337"){
-        return res.send("ewogICAgICAgICJ3ZWxjb21lLnR4dCI6IlsrXSBXM2xjMG0zIHQwIEMxQ0FEQSIsCiAgICAgICAgImxldmVscy50eHQiOiJUaGVyZSBhcmUgdG90YWwgNyBsZXZlbHMgaW4gYWxsLiIsCiAgICAgICAgImFib3V0LnR4dCI6IlRoaXMgZ2FtZSBpcyBicm91Z2h0IHRvIHlvdSBieSBzdHVkZW50cyBvZiBJSVNFUkIuIiwKICAgICAgICAiY29udGFjdC50eHQiOiAiY2ljYWRhLmlpc2VyYjMzMDFAZ21haWwuY29tIiwKICAgICAgICAiZG9udF9sb29rX2ludG9faXQubWQiOiJJIGtuZXcgeW91IHdpbGwgY29tZSBmb3IgbWUhIFdvbid0IGZpbmQgYW55dGhpbmcsIGxvbCEiLAogICAgICAgICIuYS1kZWVuIjoiaHR0cHM6Ly9jMWNhZGEtaWlzZXJiLjAwMHdlYmhvc3RhcHAuY29tL8WrbnVzLyIsCiAgICAgICAgIm5vLWRlcy50eHQiOiJMdWxsenp6enp6IiwKICAgICAgICAiLmR2YSI6Imh0dHBzOi8vYzFjYWRhLWlpc2VyYi4wMDB3ZWJob3N0YXBwLmNvbS9kdW8vIiwKICAgICAgICAicm8wdC50eHQiOiJJIGFtIGludmlzaWJsZS4iLAogICAgICAgICJsb29rX2lmX3lvdV9haW50X2h1cnQubWQiOiJJIGxvdmUgZjAwbGluZyB5b3UsIGhhaGFoYSEiLAogICAgICAgICIubGV2M2xfMSI6Imh0dHBzOi8vYzFjYWRhLWlpc2VyYi4wMDB3ZWJob3N0YXBwLmNvbS9sZXZlbF8xLyIsCiAgICAgICAgImxldjNsMS50eHQiOiJBaGggSSBzbyBlbmpveSB3YXRjaGluZyB5b3Ugc2VhcmNoIGZvciB0aGUgdW5rbm93bi4iLAogICAgICAgICIubDN2ZWxfMiI6Imh0dHBzOi8vYzFjYWRhLWlpc2VyYi4wMDB3ZWJob3N0YXBwLmNvbS9sZXZlbF8yLyIsCiAgICAgICAgImxldjNsMi5tZCI6IkdvdHRhIGFncmVlLCB5b3Ugd29udCBzdG9wIHVudGlsIHlvdSBmaW5kIiwKICAgICAgICAiLnRyZWUiOiJodHRwczovL2MxY2FkYS1paXNlcmIuMDAwd2ViaG9zdGFwcC5jb20vdHLEk3MvIiwKICAgICAgICAiLmNoeWUtdGlyLXllIjoiaHR0cHM6Ly9jMWNhZGEtaWlzZXJiLjAwMHdlYmhvc3RhcHAuY29tL3F1YXR0dW9yLyIsCiAgICAgICAgImxldjNsMy50eHQiOiJTbyBkZXNwZXJhdGUsIGh1aCEiLAogICAgICAgICIucHlhdCI6Imh0dHBzOi8vYzFjYWRhLWlpc2VyYi4wMDB3ZWJob3N0YXBwLmNvbS9xdcSrbnF1ZS8iLAogICAgICAgICJsZXYzbDQubWQiOiJMZXQncyBqdXN0IGJlIGhvbmVzdC4gWW91IHdvbnQgZmluZCBpdC4iLAogICAgICAgICIuc2hlc3QiOiJodHRwczovL2MxY2FkYS1paXNlcmIuMDAwd2ViaG9zdGFwcC5jb20vczN4LyIsCiAgICAgICAgIi5zeWVtIjoiaHR0cHM6Ly9jMWNhZGEtaWlzZXJiLjAwMHdlYmhvc3RhcHAuY29tL3NlcHRlbS8iLAogICAgICAgICJsZXYzbDUudHh0IjoiSG93J3MgdGhlIGpvc2g/PyBDb3VsZCdudCBmaW5kIGl0LCBzaXIuIEhhaGFoYSEhIiwKICAgICAgICAiLnZvLXN5ZW0iOiJodHRwczovL2MxY2FkYS1paXNlcmIuMDAwd2ViaG9zdGFwcC5jb20vbGV2ZWxfNS8iLAogICAgICAgICJsZXYzbDYiOiJBIGZyZWUgYWR2aWNlLCBnZXQgeW91cnNlbGYgYW4gYXBwb2ludG1lbnQgZnJvbSBhbiBFeWUgc3BlY2lhbGlzdC4gUHJvYmFibHkgaGUgbWlnaHQgaGVscCB5b3UgTE9PSyBmb3IgdGhlIHJpZ2h0IHRoaW5nLiIsCiAgICAgICAgIi5keWV2LXlhdCI6Imh0dHBzOi8vYzFjYWRhLWlpc2VyYi4wMDB3ZWJob3N0YXBwLmNvbS9sZXZlbF82LyIsCiAgICAgICAgImxldjNsNy50eHQiOiJBbHJpZ2h0IGEgZnJlZSBoaW50Li4uIERpZCB5b3Ugc2VlIGl0PyIsCiAgICAgICAgIi5keWVzLXlhdCI6Imh0dHBzOi8vYzFjYWRhLWlpc2VyYi4wMDB3ZWJob3N0YXBwLmNvbS9sZXZlbF83LyIKICAgIH0=")
-       }else{
+        return res.send('{
+        "welcome.txt":"[+] W3lc0m3 t0 C1CADA",
+        "levels.txt":"There are total 7 levels in all.",
+        "about.txt":"This game is brought to you by students of IISERB.",
+        "contact.txt": "cicada.iiserb3301@gmail.com",
+        "dont_look_into_it.md":"I knew you will come for me! Wont find anything, lol!",
+        ".a-deen":"https://c1cada-iiserb.000webhostapp.com/ūnus/",
+        "no-des.txt":"Lullzzzzzz",
+        ".dva":"https://c1cada-iiserb.000webhostapp.com/duo/",
+        "ro0t.txt":"I am invisible.",
+        "look_if_you_aint_hurt.md":"I love f00ling you, hahaha!",
+        ".lev3l_1":"https://c1cada-iiserb.000webhostapp.com/level_1/",
+        "lev3l1.txt":"Ahh I so enjoy watching you search for the unknown.",
+        ".l3vel_2":"https://c1cada-iiserb.000webhostapp.com/level_2/",
+        "lev3l2.md":"Gotta agree, you wont stop until you find",
+        ".tree":"https://c1cada-iiserb.000webhostapp.com/trēs/",
+        ".chye-tir-ye":"https://c1cada-iiserb.000webhostapp.com/quattuor/",
+        "lev3l3.txt":"So desperate, huh!",
+        ".pyat":"https://c1cada-iiserb.000webhostapp.com/quīnque/",
+        "lev3l4.md":"Let's just be honest. You wont find it.",
+        ".shest":"https://c1cada-iiserb.000webhostapp.com/s3x/",
+        ".syem":"https://c1cada-iiserb.000webhostapp.com/septem/",
+        "lev3l5.txt":"How's the josh?? Could'nt find it, sir. Hahaha!!",
+        ".vo-syem":"https://c1cada-iiserb.000webhostapp.com/level_5/",
+        "lev3l6":"A free advice, get yourself an appointment from an Eye specialist. Probably he might help you LOOK for the right thing.",
+        ".dyev-yat":"https://c1cada-iiserb.000webhostapp.com/level_6/",
+        "lev3l7.txt":"Alright a free hint... Did you see it?",
+        ".dyes-yat":"https://c1cada-iiserb.000webhostapp.com/level_7/"
+    }')  }else{
        return res.send("")}
 })
