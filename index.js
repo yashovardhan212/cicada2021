@@ -147,7 +147,7 @@ app.get("/alskkdjasdkjajsdasdkjaslkdjalskjdlkasjdlkasjdlkjasdlkjjasdj/:code", (r
   
 
 app.get("/check/:lol",(req,res) => {
-    return res.send("request has been made to this url with " + req.params.lol)'
+    return res.send("request has been made to this url with " + req.params.lol)
 
 } )
 
