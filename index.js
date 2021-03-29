@@ -131,7 +131,7 @@ app.post("/levelsj",(req,res) => {
     }else if(msg==""){
         return res.send("What ?")
     }else {
-        fetch('https://cicada2021.herokuapp.com/' +'/alskkdjasdkjajsdasdkjaslkdjalskjdlkasjdlkasjdlkjasdlkjjasdj/'+msg)
+        fetch('https://cicada2021.herokuapp.com/' +'alskkdjasdkjajsdasdkjaslkdjalskjdlkasjdlkasjdlkjasdlkjjasdj/'+msg)
     .then(res => res.text())
     .then(text => console.log(text))
     }
