@@ -134,9 +134,9 @@ app.post("/levelsj",(req,res) => {
         
         fetch(msg+"/adminpassword1234@1234@pop@123")
     .then(res => res.text())
-    .then(text => console.log(text))
+    .then(text => console.log(text);return res.send(" F00l");)
 
-        return res.send(" F00l");
+        
   
     }
 
