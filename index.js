@@ -157,10 +157,24 @@ app.post("/quotes",(req,res) => {
 })
 
 
-app.post("/db" , (req,res) => {
-    const code = req.body.code;
+app.post("/submit" , (req,res) => {
+        const name = req.body.name;
+        const email = req.body.email;
+        const tname = req.body.tname;
+        const phone = req.body.phone;
+        const flag1 = req.body.flag1;
+        const flag2 = req.body.flag2;
+        const flag3 = req.body.flag3;
+        const flag4 = req.body.flag4;
+        const flag5 = req.body.flag5;
+        const flag6 = req.body.flag6;
+        const flag7 = req.body.flag7;
+        const team = req.body.team;
+        
+        if(flag1 == "5ds4f54sdf54sd5f4s5d4f5sd4f" && flag2=="7656asda7s-s0df90fs0d9s09dfsd76gd" && flag3 == "6546sdf45sd21f56sd4f6s8df46s5df4" && flag4 =="67dsf6767sd76f765fgs5df5f3v32v3" && flag5 == "adminpassword1234@1234@pop@123" && flag6 == "7656asda7sd675as6d7gdas7dg7agsd76gd" && flag7 == "8787sdf8s7df78b8h8n8g8h7n8gn87"){
+                    return res.send("Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided.")
+           }else{
+                    return res.send("Flags ar3 n0t val1d !")
+           }
     
-    if(code == "1270011337"){
-        return res.send("")  }else{
-       return res.send("")}
 })
