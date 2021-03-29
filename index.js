@@ -132,9 +132,7 @@ app.post("/levelsj",(req,res) => {
         return res.send("What ?")
     }else {
         
-        fetch(msg+"/adminpassword1234@1234@pop@123")
-    .then(res => res.text())
-    .then(text => console.log(text))
+       return res.send('<input id="password" value="adminpassword1234@1234@pop@123"> <p id="secret"></p>' + msg);
 
         
   
