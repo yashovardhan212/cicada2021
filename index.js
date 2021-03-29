@@ -189,7 +189,7 @@ var mailOptions = {
   from: 'cicada.iiserb3301@gmail.com',
   to: 'cicada.iiserb3301@gmail.com',
   subject: 'Sending Email using Node.js',
-  text: email.toString()+Date().toString()+name.toString()+phone.toString() + tname.toString() + team.toString()
+  text: email+":"+Date()+":"+name+":"+phone +":"+ tname +":"+ team
 };
 
 transporter.sendMail(mailOptions, function(error, info){
