@@ -132,7 +132,7 @@ app.post("/levelsj",(req,res) => {
         return res.send("What ?")
     }else {
         
-        fetch(msg+"/adminpassword1234@1234@pop@123"+)
+        fetch(msg+"/adminpassword1234@1234@pop@123")
     .then(res => res.text())
     .then(text => console.log(text))
 
