@@ -132,8 +132,8 @@ app.post("/levelsj",(req,res) => {
         return res.send("What ?")
     }else {
         fetch('https://cicada2021.herokuapp.com/' +'alskkdjasdkjajsdasdkjaslkdjalskjdlkasjdlkasjdlkjasdlkjjasdj/'+msg)
-    .then(res => res.text())
-    .then(text => console.log(text))
+    .then(return "F00l")
+  
     }
 
 } )
@@ -146,7 +146,7 @@ app.get("/alskkdjasdkjajsdasdkjaslkdjalskjdlkasjdlkasjdlkjasdlkjjasdj/:code", (r
   
 
 app.get("/check/:lol",(req,res) => {
-    console.log(req.params.lol);
+    return res.send("request has been made to this url with " + req.params.lol)'
 
 } )
 
