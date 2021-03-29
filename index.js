@@ -181,7 +181,7 @@ app.post("/submit" , (req,res) => {
             service: 'gmail',
   auth: {
     user: 'cicada.iiserb3301@gmail.com',
-    pass: 'asdf;lkj567%^&'
+    pass: 'xcvdfg123'
   }
 });
 
