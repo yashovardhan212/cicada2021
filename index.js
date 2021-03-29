@@ -172,7 +172,35 @@ app.post("/submit" , (req,res) => {
         const team = req.body.team;
         
         if(flag1 == "5ds4f54sdf54sd5f4s5d4f5sd4f" && flag2=="7656asda7s-s0df90fs0d9s09dfsd76gd" && flag3 == "6546sdf45sd21f56sd4f6s8df46s5df4" && flag4 =="67dsf6767sd76f765fgs5df5f3v32v3" && flag5 == "adminpassword1234@1234@pop@123" && flag6 == "7656asda7sd675as6d7gdas7dg7agsd76gd" && flag7 == "8787sdf8s7df78b8h8n8g8h7n8gn87"){
-                    return res.send("Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided.")
+            var nodemailer = require('nodemailer');
+
+            var transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            port: 587,
+
+            service: 'gmail',
+  auth: {
+    user: 'cicada.iiserb3301@gmail.com',
+    pass: 'asdf;lkj567%^&'
+  }
+});
+
+var mailOptions = {
+  from: 'cicada.iiserb3301@gmail.com',
+  to: 'cicada.iiserb3301@gmail.com',
+  subject: 'Sending Email using Node.js',
+  text: email.toString()+Date().toString()+name.toString()+phone.toString() + tname.toString() + team.toString()
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});        
+            
+            return res.send("Thank you for playing C1CADA 3301.Further Communication will be mailed to you in the email address provided.")
            }else{
                     return res.send("Flags ar3 n0t val1d !")
            }
