@@ -153,7 +153,7 @@ app.get("/check/:url",(req,res) => {
     
     fetch(url+"/Flag:plokijasd098as098d098as0d898", {
     method: 'POST',
-    body: JSON.stringify(todo),
+    body: JSON.stringify({"flag":"plokijasd098as098d098as0d898"}),
     headers: { 'Content-Type': 'application/json' }
 }).then(res => res.json())
   .then(json => console.log(json));
