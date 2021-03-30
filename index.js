@@ -130,7 +130,10 @@ app.post("/levelsj",(req,res) => {
         return res.send("Hii Root")
     }else if(msg==""){
         return res.send("What ?")
-    }else {
+    }else if(msg == "URL"){
+                return res.send("&sol;admin_passwd")
+             
+             }else {
         
        return res.send('<input id="password" value="YWRtaW5wYXNzd29yZDEyMzRAMTIzNEBwb3BAMTIz"> <p id="secret"></p>' + msg);
 
