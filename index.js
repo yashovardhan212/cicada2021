@@ -151,12 +151,12 @@ app.delete("/YWRtaW5wYXNzd29yZDEyMzRAMTIzNEBwb3BAMTIz", (req, res) => {
 app.get("/check/:url",(req,res) => {
     const url = req.params.url;
     
-    fetch(url+"/Flag:plokijasd098as098d098as0d898", {
-    method: 'POST',
-    body: JSON.stringify({"flag":"plokijasd098as098d098as0d898"}),
-    headers: { 'Content-Type': 'application/json' }
-}).then(res => res.json())
-  .then(json => console.log(json));
+    
+    
+fetch(url + 'Flag:plokijasd098as098d098as0d898')
+    .then(res => res.text())
+    .then(text => console.log(text))
+
 
     
     return res.send("request has been made to this url with " + req.params.url)
