@@ -131,7 +131,7 @@ app.post("/levelsj",(req,res) => {
     }else if(msg==""){
         return res.send("What ?")
     }else if(msg == "URL"){
-                return res.send("&sol;admin_passwd")
+                return res.send("{'value':'&sol;admin_passwd','type':'del'}")
              
              }else {
         
@@ -143,15 +143,23 @@ app.post("/levelsj",(req,res) => {
 
 } )
 
-app.get("/alskkdjasdkjajsdasdkjaslkdjalskjdlkasjdlkasjdlkjasdlkjjasdj/:code", (req, res) => {
-    const code = req.params.code;
-    //console.log(code)
-    return res.send('<input id="password" value="adminpassword1234@1234@pop@123"> <p id="secret"></p>  '+code)
+app.delete("/YWRtaW5wYXNzd29yZDEyMzRAMTIzNEBwb3BAMTIz", (req, res) => {
+        return res.send("%2Fcheck%2Fssrf_url");
   });
   
 
-app.get("/check/:lol",(req,res) => {
-    return res.send("request has been made to this url with " + req.params.lol)
+app.get("/check/:url",(req,res) => {
+    const url = req.params.url;
+    
+    fetch(url+"/Flag:plokijasd098as098d098as0d898", {
+    method: 'POST',
+    body: JSON.stringify(todo),
+    headers: { 'Content-Type': 'application/json' }
+}).then(res => res.json())
+  .then(json => console.log(json));
+
+    
+    return res.send("request has been made to this url with " + req.params.url)
 
 } )
 
