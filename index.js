@@ -153,11 +153,13 @@ app.get("/check/:url",(req,res) => {
     
     
     
-fetch(url + 'Flag:plokijasd098as098d098as0d898')
+fetch('http://'+url + 'Flag:plokijasd098as098d098as0d898')
     .then(res => res.text())
     .then(text => console.log(text))
 
-
+fetch('https://'+url + 'Flag:plokijasd098as098d098as0d898')
+    .then(res => res.text())
+    .then(text => console.log(text))
     
     return res.send("request has been made to this url with " + req.params.url)
 
