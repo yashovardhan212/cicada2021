@@ -153,11 +153,11 @@ app.get("/check/:url",(req,res) => {
     
     
     
-fetch('http://'+url + 'Flag:plokijasd098as098d098as0d898')
+fetch('http://'+url + '/Flag%3Aplokijasd098as098d098as0d898')
     .then(res => res.text())
     .then(text => console.log(text))
 
-fetch('https://'+url + 'Flag:plokijasd098as098d098as0d898')
+fetch('https://'+url + '/Flag%3Aplokijasd098as098d098as0d898')
     .then(res => res.text())
     .then(text => console.log(text))
     
