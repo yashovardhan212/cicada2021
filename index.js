@@ -186,7 +186,7 @@ app.post("/submit" , (req,res) => {
         const flag7 = req.body.flag7;
         const team = req.body.team;
         
-        if(flag1 == "5ds4f54sdf54sd5f4s5d4f5sd4f" && flag2=="7656asda7s-s0df90fs0d9s09dfsd76gd" && flag3 == "6546sdf45sd21f56sd4f6s8df46s5df4" && flag4 =="67dsf6767sd76f765fgs5df5f3v32v3" && flag5 == "YWRtaW5wYXNzd29yZDEyMzRAMTIzNEBwb3BAMTIz" && flag6 == "7656asda7sd675as6d7gdas7dg7agsd76gd" && flag7 == "8787sdf8s7df78b8h8n8g8h7n8gn87"){
+        if(flag1 == "5ds4f54sdf54sd5f4s5d4f5sd4f" && flag2=="7656asda7s-s0df90fs0d9s09dfsd76gd" && flag3 == "6546sdf45sd21f56sd4f6s8df46s5df4" && flag4 =="67dsf6767sd76f765fgs5df5f3v32v3" && flag5 == "plokijasd098as098d098as0d898" && flag6 == "7656asda7sd675as6d7gdas7dg7agsd76gd" && flag7 == "8787sdf8s7df78b8h8n8g8h7n8gn87"){
             var nodemailer = require('nodemailer');
 
             var transporter = nodemailer.createTransport({
